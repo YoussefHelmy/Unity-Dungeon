@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    bool hasGameLostUI = false;
+    public bool hasGameLostUI = false;
 
-    GameObject GameLostUI;
+    public GameObject GameLostUI;
 
     public void RestartLevel()
     {
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         {
             GameLostUI.SetActive(true);
         }
-        RestartLevel();
+        Invoke("RestartLevel", 2);
     }
 
 }
