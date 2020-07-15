@@ -274,7 +274,8 @@ namespace Opsive.UltimateCharacterController.Character
         /// Detect the footstep.
         /// </summary>
         private void FixedUpdate()
-        {
+        {    
+
             // The character has to be grounded and moving in order to be able to place footsteps.
             if (!m_CharacterLocomotion.Grounded || m_CharacterLocomotion.LocomotionVelocity.sqrMagnitude < m_MinVelocity || m_FootstepMode == FootstepPlacementMode.None) {
                 return;
