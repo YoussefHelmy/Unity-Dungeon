@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
+
     Animator anime;
     public bool correct = false;
     bool inRange = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            inRange = true;
-        }
+        inRange = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        {
-            inRange = false;
-        }
+        inRange = false;
     }
 
     private void Start()
@@ -37,14 +32,14 @@ public class Chest : MonoBehaviour
             if (Input.GetButtonDown("Action"))
             {
                 anime.SetBool("Open", true);
-
+                Debug.Log("open");
                 if (!correct)
                 {
                     GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().GameLost();
                 }
                 else
                 {
-
+                    GameObject.FindGameObjectWithTag("Master").GetComponent<DungeonMaster>().Solved(0);
                 }
             }
         }

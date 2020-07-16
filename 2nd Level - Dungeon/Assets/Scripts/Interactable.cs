@@ -4,7 +4,10 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public bool isInteractable = false;
+<<<<<<< HEAD
   
+=======
+>>>>>>> 5a8d17e2f42f2239135a2c4217be6a6d897eb817
 
     public void Update()
     {
@@ -16,6 +19,10 @@ public class Interactable : MonoBehaviour
     }
 
 
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 5a8d17e2f42f2239135a2c4217be6a6d897eb817
     private void OnTriggerEnter(Collider other)
     {
         
@@ -27,6 +34,7 @@ public class Interactable : MonoBehaviour
         isInteractable = false;
     }
     
+<<<<<<< HEAD
 
 
 
@@ -37,4 +45,6 @@ public class Interactable : MonoBehaviour
 
 
    
+=======
+>>>>>>> 5a8d17e2f42f2239135a2c4217be6a6d897eb817
 }

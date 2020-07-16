@@ -8,6 +8,8 @@ TagManager:
   - Selectable
   - Chest
   - Lever
+  - Master
+  - GameManager
   layers:
   - Default
   - TransparentFX
