@@ -7,6 +7,7 @@ public class Chest : MonoBehaviour
 
     Animator anime;
     public bool correct = false;
+    
     bool inRange = false;
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +33,6 @@ public class Chest : MonoBehaviour
             if (Input.GetButtonDown("Action"))
             {
                 anime.SetBool("Open", true);
-                Debug.Log("open");
                 if (!correct)
                 {
                     GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().GameLost();

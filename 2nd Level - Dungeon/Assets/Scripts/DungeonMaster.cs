@@ -10,6 +10,7 @@ public class DungeonMaster : MonoBehaviour
     public GameObject[] deathEyes;
     bool[] puzzles = { false, false, false };
 
+    bool opened = false;
     
 
     public void Solved(int index)
@@ -34,9 +35,10 @@ public class DungeonMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (puzzles[0] && puzzles[1] && puzzles[2])
+        if (puzzles[0] && puzzles[1] && puzzles[2] && !opened)
         {
             Portal.SetActive(true);
+            opened = true;
         }
     }
 }

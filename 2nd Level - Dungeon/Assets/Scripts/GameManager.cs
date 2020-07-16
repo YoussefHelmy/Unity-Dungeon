@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void Resume()
+    {
+
+    }
+
     public void GameLost()
     {
         if (hasGameLostUI)
