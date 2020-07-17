@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    bool pause = false;
+    [SerializeField] bool isLevel;
+    public GameObject pauseMenuCanvas;
     public bool hasGameLostUI = false;
 
     public GameObject GameLostUI;
-
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -28,12 +30,33 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
+    
     public void Resume()
     {
-
+        pause = false;
+        pauseMenuCanvas.SetActive(false);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
+        Camera.main.GetComponent<MouseLooker>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
+    public void Pause()
+    {
+        pause = true;
+        pauseMenuCanvas.SetActive(true);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
+        Camera.main.GetComponent<MouseLooker>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    void Start()
+    {
+        if (isLevel)
+        {
+            pauseMenuCanvas.SetActive(false);
+        }
+        pause = false;
+
+    }
     public void GameLost()
     {
         if (hasGameLostUI)
@@ -41,6 +64,23 @@ public class GameManager : MonoBehaviour
             GameLostUI.SetActive(true);
         }
         Invoke("RestartLevel", 2);
+    }
+
+    void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && isLevel)
+        {
+            if (pause)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+
     }
 
 }

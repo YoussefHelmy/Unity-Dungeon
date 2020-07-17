@@ -5,18 +5,16 @@ public class InteractableLever : MonoBehaviour
 {
     public int lightnumber;
     public GameObject PuzzleLight;
-    public bool isInteractable = false;
+    bool inRange = false;
     int[] SecondPuzzleSol = new int[] {1,2,3,4,1};
-    public static int Count = 0;
+    static int Count = 0;
     
     
     public void Update()
     { 
-       if (isInteractable && Input.GetKeyDown(KeyCode.F))
+       if (inRange && Input.GetKeyDown(KeyCode.E))
         {
            
-
-            
             if(Count < 5){
                 if (lightnumber == SecondPuzzleSol[Count])
                 { 
@@ -31,7 +29,6 @@ public class InteractableLever : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Master").GetComponent<DungeonMaster>().Solved(1);
             }
 
-
             if (PuzzleLight.active)
 
             {
@@ -45,17 +42,15 @@ public class InteractableLever : MonoBehaviour
 
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
         
-            isInteractable = true;
+            inRange = true;
     }
     private void OnTriggerExit(Collider other)
     {
 
-        isInteractable = false;
+        inRange = false;
     }
     
 }
