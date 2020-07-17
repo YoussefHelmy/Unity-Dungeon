@@ -1142,6 +1142,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: PuzzleLight
+      value: 
+      objectReference: {fileID: 2017964805}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: lightnumber
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86fe03ab8ed5ac74aa15ed7074970102, type: 3}
 --- !u!4 &24434239 stripped
@@ -3243,21 +3253,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 24434238}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &76017786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76017785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa49e46c355a3498d5e8f06538366e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightnumber: 4
-  PuzzleLight: {fileID: 2017964805}
-  isInteractable: 0
 --- !u!65 &76017787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29987,6 +29982,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: PuzzleLight
+      value: 
+      objectReference: {fileID: 1256245410}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: lightnumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86fe03ab8ed5ac74aa15ed7074970102, type: 3}
 --- !u!4 &636274022 stripped
@@ -31574,7 +31579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &665390126
 Transform:
   m_ObjectHideFlags: 0
@@ -32324,6 +32329,7 @@ Transform:
   - {fileID: 1676154072}
   - {fileID: 337459466}
   - {fileID: 1553318163}
+  - {fileID: 1069998196}
   - {fileID: 181918438}
   - {fileID: 1567450212}
   - {fileID: 1771683959}
@@ -32591,7 +32597,6 @@ Transform:
   - {fileID: 1817642969}
   - {fileID: 696359220}
   - {fileID: 425224495}
-  - {fileID: 1069998196}
   - {fileID: 82746084}
   - {fileID: 1190649101}
   - {fileID: 1608253512}
@@ -41794,21 +41799,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1121359063}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &865171823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865171822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa49e46c355a3498d5e8f06538366e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightnumber: 2
-  PuzzleLight: {fileID: 2031709248}
-  isInteractable: 0
 --- !u!65 &865171824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50488,7 +50478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 673992460}
-  m_RootOrder: 481
+  m_RootOrder: 214
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!1001 &1071064774
 PrefabInstance:
@@ -52786,6 +52776,16 @@ PrefabInstance:
     - target: {fileID: 431570, guid: 86fe03ab8ed5ac74aa15ed7074970102, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: PuzzleLight
+      value: 
+      objectReference: {fileID: 2031709248}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: lightnumber
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86fe03ab8ed5ac74aa15ed7074970102, type: 3}
@@ -59225,7 +59225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1256245411
 Transform:
   m_ObjectHideFlags: 0
@@ -72601,21 +72601,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 636274021}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1559437346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559437345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa49e46c355a3498d5e8f06538366e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightnumber: 1
-  PuzzleLight: {fileID: 1256245410}
-  isInteractable: 0
 --- !u!65 &1559437348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73168,6 +73153,16 @@ PrefabInstance:
     - target: {fileID: 431570, guid: 86fe03ab8ed5ac74aa15ed7074970102, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: PuzzleLight
+      value: 
+      objectReference: {fileID: 665390125}
+    - target: {fileID: 7369736892254981606, guid: 86fe03ab8ed5ac74aa15ed7074970102,
+        type: 3}
+      propertyPath: lightnumber
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86fe03ab8ed5ac74aa15ed7074970102, type: 3}
@@ -84900,7 +84895,7 @@ MonoBehaviour:
   - m_Object: {fileID: 1332074644}
     m_Group: 0
     m_FlippedFootprint: 1
-  m_MinVelocity: 3
+  m_MinVelocity: 5
   m_MoveDirectionFrameCount: 7
   m_FootOffset: 0.03
   m_Interval: 0.3
@@ -89332,21 +89327,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1569694451}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1905832640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905832639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa49e46c355a3498d5e8f06538366e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightnumber: 3
-  PuzzleLight: {fileID: 665390125}
-  isInteractable: 0
 --- !u!65 &1905832641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94434,7 +94414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2017964806
 Transform:
   m_ObjectHideFlags: 0
@@ -95410,7 +95390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2031709249
 Transform:
   m_ObjectHideFlags: 0

@@ -9,10 +9,7 @@ public class InteractableLever : MonoBehaviour
     int[] SecondPuzzleSol = new int[] {1,2,3,4,1};
     public static int Count = 0;
     
-    private void Start()
-    {
-         
-    }
+    
     public void Update()
     { 
        if (isInteractable && Input.GetKeyDown(KeyCode.F))
@@ -20,15 +17,19 @@ public class InteractableLever : MonoBehaviour
            
 
             
-            if(Count <= 5){
+            if(Count < 5){
                 if (lightnumber == SecondPuzzleSol[Count])
                 { 
                     Count++;
                     
                 } 
                 else Count = 0;
+
             }
-            Debug.Log("This is Light No." + Count);
+            if (Count >=5)
+            {
+                GameObject.FindGameObjectWithTag("Master").GetComponent<DungeonMaster>().Solved(1);
+            }
 
 
             if (PuzzleLight.active)

@@ -22,7 +22,12 @@ public class InteractablePad : MonoBehaviour
             else { Count = 0;  } 
 
         }
-    
+        if (Count >= 5)
+        {
+            GameObject.FindGameObjectWithTag("Master").GetComponent<DungeonMaster>().Solved(2);
+
+        }
+
     }
 
 
