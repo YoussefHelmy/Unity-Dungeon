@@ -12,7 +12,7 @@ public class DoorHandler : MonoBehaviour
     [SerializeField] bool hasUI = false;
     [SerializeField] int doorID;
     public Text display;
-
+    public AudioClip openSFX;
     DataKeeper dk;
     bool paused = false;
     Animator anime;
@@ -91,7 +91,7 @@ public class DoorHandler : MonoBehaviour
     void OpenDoor()
     {
         anime.SetBool("DoorOpen", true);
-
+        GetComponent<AudioSource>().PlayOneShot(openSFX);
     }
 
     void CloseDoor()

@@ -7,7 +7,7 @@ public class GateHandler : MonoBehaviour
 
     [SerializeField] DataKeeper dk;
     [SerializeField] int doorID;
-
+    public AudioClip openSFX;
     Animator anime;
 
     // Start is called before the first frame update
@@ -26,6 +26,7 @@ public class GateHandler : MonoBehaviour
             if (!(dk.CheckedLockedWithDoorID(doorID)))
             {
                 anime.SetTrigger("OpenDoor");
+                GetComponent<AudioSource>().PlayOneShot(openSFX);
             }
         }
     }
