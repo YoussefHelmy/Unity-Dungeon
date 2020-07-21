@@ -12,7 +12,7 @@ public class DestructableBoxes : MonoBehaviour
     bool hit = false;
     MysticCaveMaster mc;
     static float time = 0.0f;
-   public static float interpolationPeriod = 5;
+   public static float interpolationPeriod = 10;
     bool wrongAnser = false;
     public GameObject Statue;
 
@@ -30,7 +30,7 @@ public class DestructableBoxes : MonoBehaviour
             Instantiate(shatteredBox, transform.position, transform.rotation);
             GetComponent<BoxCollider>().enabled = false;
             hit = false;
-
+            
             if (Count < 5)
             {
                 if (boxNumber == solution[Count])
@@ -38,7 +38,7 @@ public class DestructableBoxes : MonoBehaviour
                     Count++;
                     
 
-                    wrongAnser = false;
+                    
                     Debug.Log("Correct , box hit is + " + boxNumber);
                 }
                 else if (boxNumber != solution[Count]) 
@@ -63,10 +63,11 @@ public class DestructableBoxes : MonoBehaviour
 
         if (time >= interpolationPeriod && wrongAnser == true)
         {
+            wrongAnser = false;
             time = 0.0f;
-            ResetBox();
+            mc.Reset();
         }
-
+       
     }
 
     public void ResetBox()
