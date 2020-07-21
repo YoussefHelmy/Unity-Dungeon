@@ -11,6 +11,8 @@ TagManager:
   - Master
   - GameManager
   - DataKeeper
+  - Box
+  - Piller
   layers:
   - Default
   - TransparentFX

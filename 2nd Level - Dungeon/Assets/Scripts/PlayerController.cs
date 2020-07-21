@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour
     public Transform GroundCheck;
     public float groundDist = 0.5f;
     public LayerMask GroundMask;
-    public bool hasGun;
-    public GameObject gun;
+    
 
     //private variables
     float currentSpeed;
@@ -24,7 +23,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gun.SetActive(hasGun);
 
         currentSpeed = walkSpeed;
 

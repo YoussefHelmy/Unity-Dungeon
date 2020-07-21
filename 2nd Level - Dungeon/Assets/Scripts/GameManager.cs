@@ -54,12 +54,18 @@ public class GameManager : MonoBehaviour
         {
             pauseMenuCanvas.SetActive(false);
         }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
         pause = false;
+
+        
 
     }
     public void GameLost()
     {
-        if (hasGameLostUI)
+        if (hasGameLostUI && isLevel)
         {
             GameLostUI.SetActive(true);
         }
