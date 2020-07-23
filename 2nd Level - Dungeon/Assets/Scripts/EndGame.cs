@@ -17,7 +17,6 @@ public class EndGame : MonoBehaviour
     {
 
         gm.NextLevel();
-        Debug.Log("next");
 
     }
 

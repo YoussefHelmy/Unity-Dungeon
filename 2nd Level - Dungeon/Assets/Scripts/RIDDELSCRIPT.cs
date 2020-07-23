@@ -145,7 +145,7 @@ public class RIDDELSCRIPT : MonoBehaviour
     {
         LOCKERNUMB = locker;
         Debug.Log(locker);
-        int rand = Random.Range(1, 4);
+        int rand = Random.Range(1, 3);
         Reddeltext(rand);
         checkriddel();
     }

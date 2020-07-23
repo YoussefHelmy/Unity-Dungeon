@@ -28,7 +28,6 @@ public class UIButton : MonoBehaviour
         else if (c == "quit")
         {
             gm.ExitGame();
-            Debug.Log("quit");
 
         }
         else if (c == "resume")
