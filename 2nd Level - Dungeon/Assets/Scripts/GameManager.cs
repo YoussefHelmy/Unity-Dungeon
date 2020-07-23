@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
+
     public void ExitGame()
     {
         Application.Quit();
@@ -60,12 +60,7 @@ public class GameManager : MonoBehaviour
         }
         pause = false;
 
-        if (hasGameLostUI)
-        {
-            pauseMenuCanvas.SetActive(false);
-
-        }
-
+        
 
     }
     public void GameLost()
@@ -73,14 +68,8 @@ public class GameManager : MonoBehaviour
         if (hasGameLostUI && isLevel)
         {
             GameLostUI.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
-            Camera.main.GetComponent<MouseLooker>().enabled = false;
         }
-        else
-        {
-            Invoke("RestartLevel", 2);
-        }
+        Invoke("RestartLevel", 2);
     }
 
     void Update()

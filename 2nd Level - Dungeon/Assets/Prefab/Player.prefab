@@ -135,8 +135,6 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 256
-  hasGun: 0
-  gun: {fileID: 100000, guid: 7d06582fc8e311644a92e6d9e9cab273, type: 3}
 --- !u!1 &9115711971480430635
 GameObject:
   m_ObjectHideFlags: 0
