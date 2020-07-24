@@ -67,9 +67,12 @@ public class GameManager : MonoBehaviour
     {
         if (hasGameLostUI && isLevel)
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
+            Camera.main.GetComponent<MouseLooker>().enabled = false;
             GameLostUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
-        Invoke("RestartLevel", 2);
+        //Invoke("RestartLevel", 2);
     }
 
     void Update()
