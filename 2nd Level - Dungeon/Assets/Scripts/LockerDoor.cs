@@ -9,7 +9,7 @@ public class LockerDoor : MonoBehaviour
     [SerializeField] [Range(0, 2)] int lockerNumber;
     DataKeeper dk;
     Animator anime;
-    bool inRange;
+    bool inRange = false;
     bool opened = false;
 
 
@@ -22,7 +22,6 @@ public class LockerDoor : MonoBehaviour
         dependency.SetActive(false);
         opened = false;
         correctLockerNumber = dk.GetLockerNumber();
-        
     }
 
 
@@ -55,13 +54,23 @@ public class LockerDoor : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact"))
             {
+                
                 OpenDoor();
                 opened = true;
                 if (dk.GetLockerNumber() == lockerNumber)
                 {
                     dependency.SetActive(true);
                 }
+                else
+                {
+                    Invoke("Die", 2);
+                }
             }
         }
+    }
+
+    void Die()
+    {
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().GameLost();
     }
 }

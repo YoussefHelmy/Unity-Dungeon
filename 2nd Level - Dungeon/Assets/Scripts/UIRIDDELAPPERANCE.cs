@@ -7,11 +7,11 @@ public class UIRIDDELAPPERANCE : MonoBehaviour
 {
     private bool ISTRIGGER = false;
     [SerializeField] private Image REDDELs;
-    public GameObject v;
+    public GameObject RiddleCanvas;
     public void Start()
     {
        REDDELs.enabled = false;
-        v.SetActive(false); 
+        RiddleCanvas.SetActive(false); 
     }
 
     public void Update()
@@ -30,16 +30,19 @@ public class UIRIDDELAPPERANCE : MonoBehaviour
     }
     private void OnTriggerEnter(Collider player)
     {
-        ISTRIGGER = true;
-        if (ISTRIGGER)
+        if (player.transform.tag == "Player")
         {
-            v.SetActive(true);
+            ISTRIGGER = true;
+            if (ISTRIGGER)
+            {
+                RiddleCanvas.SetActive(true);
+            }
         }
     }
     private void OnTriggerExit(Collider player)
     {
         ISTRIGGER = false;
-        v.SetActive(false);
+        RiddleCanvas.SetActive(false);
     }
     
 }

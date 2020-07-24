@@ -76,7 +76,6 @@ public class VaultManager : MonoBehaviour
             hallWallEquation.text = "<color=#2659B0>X</color><color=#4C515A>= 6y + 9</color>";
             dh = deathlyHallows.cloak;
         }
-        dh = deathlyHallows.cloak;
         dk.SetCorrectPass(correctCellPassKey , 0); // storing correct password by door ID
         dk.RiddleSetup((int) dh); //storing correct deathly hallow
 
