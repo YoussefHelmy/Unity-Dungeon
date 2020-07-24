@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool isLevel;
     public GameObject pauseMenuCanvas;
     public bool hasGameLostUI = false;
+    bool dead = false;
 
     public GameObject GameLostUI;
     public void RestartLevel()
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         Camera.main.GetComponent<MouseLooker>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
     }
+
     void Start()
     {
         if (isLevel)
@@ -67,18 +69,23 @@ public class GameManager : MonoBehaviour
     {
         if (hasGameLostUI && isLevel)
         {
+            GameLostUI.SetActive(true);
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
             Camera.main.GetComponent<MouseLooker>().enabled = false;
-            GameLostUI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            dead = true;
+
         }
-        //Invoke("RestartLevel", 2);
+        else
+        {
+            Invoke("RestartLevel", 2);
+        }
     }
 
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Escape) && isLevel)
+        if (Input.GetKeyDown(KeyCode.Escape) && isLevel && !dead)
         {
             if (pause)
             {

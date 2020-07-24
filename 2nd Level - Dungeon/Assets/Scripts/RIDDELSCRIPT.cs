@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class RIDDELSCRIPT : MonoBehaviour
 {
-    private string ridddel1qurantine = "LWMRRQGAIU";
-    private string ridddel2qurantine = "UXFGIWFIQO";
-    private string ridddel3qurantine = "ULDOAFQFTU";
+    private string ridddel1qurantine = "QUARANTINE";
+    private string ridddel2qurantine = "QUARANTINE";
+    private string ridddel3qurantine = "QUARANTINE";
     //-------------------------------------------------------- RIDDEL1 ANSWER
-    private string ridddel1BLOCKOFEPIDEMIC = "CSMHFRGFSFCKAEBU";
-    private string ridddel2BLOCKOFEPIDEMIC = "AGLEXKICTFBHERQK";
-    private string ridddel3BLOCKOFEPIDEMIC = "RMGEAKCSQDRTQBTZ";
+    private string ridddel1BLOCKOFEPIDEMIC = "EPIDEMIC";
+    private string ridddel2BLOCKOFEPIDEMIC = "EPIDEMIC";
+    private string ridddel3BLOCKOFEPIDEMIC = "EPIDEMIC";
     //----------------------------------------------------------RIDDEL2 ANSWER
-    private string riddLE1NUCLEARBUMB = "MWEUIMADMCJA";
-    private string riddLE2NUCLEARBUMB = "IRQACBIGRQLOL";
-    private string riddLE3NUCLEARBUMB = "GQEUTOBDLPDW";
+    private string riddLE1NUCLEARBUMB = "NUCLEAR";
+    private string riddLE2NUCLEARBUMB = "NUCLEAR";
+    private string riddLE3NUCLEARBUMB = "NUCLEAR";
     //-----------------------------------------------------------RIDDEL3 ANSWER
     public GameObject RIDDEL1;
     public GameObject RIDDEL2;
@@ -26,6 +26,7 @@ public class RIDDELSCRIPT : MonoBehaviour
     private static int RIDELTEXT;
     private static string riddelfinalaswer;
     DataKeeper dk;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,22 +42,22 @@ public class RIDDELSCRIPT : MonoBehaviour
         if (RIDELTEXT == 1)//qurantine==1 YA HEGAZY TMAM
         {
             riddelfinalaswer = ridddel1qurantine; 
-            hint.text = "qurantine";
-
+            hint.text = "LWRMRASKMG";
         }
+
         else if (RIDELTEXT == 2)//"BLOCK OF EPIDEMIC" ==2 YA HEGAZY TMAM
         {
             riddelfinalaswer = ridddel1BLOCKOFEPIDEMIC;
-            hint.text = "BLOCK OF EPIDEMIC";
-
+            hint.text = "FLKBLCEB";
 
         }
+
         else if (RIDELTEXT == 3)// "NUCLEAR BUMB"  == YA HEGAZY TMAM
         {
             riddelfinalaswer = riddLE1NUCLEARBUMB;
-            hint.text = "NUCLEAR BUMB";
-
+            hint.text = "MWEUIMAZ";
         }
+
         else
         {
             Debug.LogError("error VALUE dude try again");
@@ -72,20 +73,19 @@ public class RIDDELSCRIPT : MonoBehaviour
         if (RIDELTEXT == 1) //qurantine==1 YA HEGAZY TMAM
         {
             riddelfinalaswer = ridddel2qurantine;
-            hint.text = "qurantine";
+            hint.text = "UXGFDFBOIH";
 
         }
         else if (RIDELTEXT == 2)//"BLOCK OF EPIDEMIC" ==2 YA HEGAZY TMAM
         {
             riddelfinalaswer = ridddel2BLOCKOFEPIDEMIC;
-            hint.text = "BLOCK OF EPIDEMIC";
+            hint.text = "CTNBCHFE";
 
         }
         else if (RIDELTEXT == 3)// "NUCLEAR BUMB"  == 3 YA HEGAZY TMAM
         {
             riddelfinalaswer = riddLE2NUCLEARBUMB;
-            hint.text = "NUCLEAR BUMB";
-
+            hint.text = "IRQACBUV";
         }
         else
         {
@@ -100,18 +100,18 @@ public class RIDDELSCRIPT : MonoBehaviour
         if (RIDELTEXT == 1) //qurantine==1 YA HEGAZY TMAM
         {
             riddelfinalaswer = ridddel3qurantine;
-            hint.text = "qurantine";
+            hint.text = "ULODNGFDOF";
         }
         else if (RIDELTEXT == 2)//"BLOCK OF EPIDEMIC" ==2 YA HEGAZY TMAM
         {
             riddelfinalaswer = ridddel3BLOCKOFEPIDEMIC;
-            hint.text = "BLOCK OF EPIDEMIC";
+            hint.text = "TLHISLHF";
 
         }
         else if (RIDELTEXT == 3)// "NUCLEAR BUMB"  ==3 YA HEGAZY TMAM
         {
             riddelfinalaswer = riddLE3NUCLEARBUMB;
-            hint.text = "NUCLEAR BUMB";
+            hint.text = "GQEUTODV";
 
         }
         else
@@ -125,7 +125,6 @@ public class RIDDELSCRIPT : MonoBehaviour
     }
     void checkriddel()
     {
-        Debug.Log(RIDELTEXT);
 
         if (LOCKERNUMB == 1)
         {
@@ -144,7 +143,6 @@ public class RIDDELSCRIPT : MonoBehaviour
     public void lockernum(int locker)
     {
         LOCKERNUMB = locker;
-        Debug.Log(locker);
         int rand = Random.Range(1, 4);
         Reddeltext(rand);
         checkriddel();
