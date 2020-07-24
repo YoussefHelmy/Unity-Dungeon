@@ -94,6 +94,7 @@ public class RIDDELSCRIPT : MonoBehaviour
         dk.SetCorrectPass(riddelfinalaswer, 1);
 
     }
+
     void RIDDELSCRIPTS3()
     {
         RIDDEL3.SetActive(true);
