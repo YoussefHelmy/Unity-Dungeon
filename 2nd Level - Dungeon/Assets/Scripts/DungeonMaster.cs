@@ -9,9 +9,10 @@ public class DungeonMaster : MonoBehaviour
     public GameObject Portal;
     public GameObject[] deathEyes;
     bool[] puzzles = { false, false, false };
-
+    
     bool opened = false;
     
+
 
     public void Solved(int index)
     {
@@ -41,4 +42,12 @@ public class DungeonMaster : MonoBehaviour
             opened = true;
         }
     }
+
+    int Randomize(int min, int max)
+    {
+        int rand = Random.Range(min, max);
+
+        return rand;
+    }
+
 }

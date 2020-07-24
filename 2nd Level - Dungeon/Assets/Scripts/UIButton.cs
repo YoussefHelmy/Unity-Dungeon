@@ -23,6 +23,7 @@ public class UIButton : MonoBehaviour
         else if (c == "restart")
         {
             gm.RestartLevel();
+            Debug.Log("restart");
 
         }
         else if (c == "quit")

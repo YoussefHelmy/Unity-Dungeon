@@ -60,6 +60,10 @@ public class GameManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
+        if (hasGameLostUI)
+        {
+            GameLostUI.SetActive(false);
+        }
         pause = false;
 
         
